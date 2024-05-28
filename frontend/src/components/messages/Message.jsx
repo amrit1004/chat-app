@@ -6,7 +6,7 @@ const Message = ({message}) => {
   const {selectedConversation} =  useConversation();
   const fromMe = message.senderId === authUser._id;
   const ChatClassName = fromMe ? 'chat-end' : 'chat-start';
-  const profilePic = fromMe? authUser.profile: selectedConversation?.profilePic;
+  const profilePic = fromMe? authUser.profilePic: selectedConversation?.profilePic;
   const bubbleBgColor = fromMe? 'bg-blue-500':'';
   const formattedTime = extractTime(message.createdAt)
 
